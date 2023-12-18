@@ -4,6 +4,8 @@ const WalterGordon = {nome: 'Walter Gordon', ruolo: 'Office Manager', immagine: 
 const AngelaLopez = {nome: 'Angela Lopez', ruolo: 'Social Media Manager', immagine: 'angela-lopez-social-media-manager.jpg'}
 const ScottEstrada = {nome: 'Scott Estrada', ruolo: 'Developer', immagine: 'scott-estrada-developer.jpg'}
 const BarbaraRamos = {nome: 'Barbara Ramos', ruolo: 'Graphic Designer', immagine: 'barbara-ramos-graphic-designer.jpg'}
+const body = document.querySelector('body');
+
 
 
 const team = {
@@ -21,3 +23,13 @@ console.log(WalterGordon);
 console.log(AngelaLopez);
 console.log(ScottEstrada);
 console.log(BarbaraRamos);
+
+//funzione per visualizzare il contenuto dell'oggetto
+
+let i = 0;
+for ( let key in team ) {
+    const persona = document.createElement('div');
+    persona.innerHTML = team.key;
+    body.append(persona);
+    i++;
+};
